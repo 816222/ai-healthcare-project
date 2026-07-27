@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+AI Healthcare Quiz
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+AI Healthcare Quiz
+</h1>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="global.html">Global Trends</a>
+<a href="india.html">AI in India</a>
+<a href="quiz.html">Quiz</a>
+
+</nav>
+
+
+
+<section>
+
+
+<h2>
+Test Your Knowledge
+</h2>
+
+
+<p>
+Can Artificial Intelligence replace doctors completely?
+</p>
+
+
+<input type="text" id="answer" placeholder="Type your answer">
+
+
+<br><br>
+
+
+<button onclick="checkAnswer()">
+
+Check Answer
+
+</button>
+
+
+<p id="result"></p>
+
+
+
+<h3>
+AI Healthcare Topics
+</h3>
+
+
+<p id="topics"></p>
+
+
+</section>
+
+
+
+<script>
+
+
+function checkAnswer(){
+
+let answer = document.getElementById("answer").value;
+
+
+if(answer.toLowerCase()=="no"){
+
+document.getElementById("result").innerHTML =
+"Correct! AI supports doctors but does not replace them.";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"Try again. AI works together with doctors.";
+
+}
+
+}
+
+
+
+// Array
+
+let topics = [
+"Medical Imaging",
+"Telemedicine",
+"Robotic Surgery",
+"Disease Detection"
+];
+
+
+
+// Loop
+
+let text="";
+
+for(let i=0; i<topics.length; i++){
+
+text += topics[i] + "<br>";
+
+}
+
+
+document.getElementById("topics").innerHTML=text;
+
+
+</script>
+
+
+
+</body>
+
+</html>
